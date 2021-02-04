@@ -110,3 +110,6 @@ RUN echo "conda ${CONDA_PKG_VERSION}" >> /miniconda3/conda-meta/pinned && \
 
 # Install latest version of XGBoost
 RUN python3 -m pip install --no-cache -I xgboost==${XGBOOST_VERSION}
+
+WORKDIR /app
+ADD . /app
